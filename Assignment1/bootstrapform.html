@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <Header>
+        <h1>Assignment 1</h1>
+        <div class="alert alert-warning" role="alert">
+            <strong>Warning! This is an assignment for a class.</strong>
+        </div>
+    </Header>
+    <nav>
+        <a href="index.html">Back</a>
+    </nav>
+    <main>
+        <div class="form-container">
+            <form action="https://www.oit.edu/cst465" method="POST">
+                <div class="form-group">
+                    <label >Name</label>
+                    <input name="Name" type="text" class="form-control" id="name" placeholder="Enter name">
+                </div>
+                <div class="form-group">
+                    <label>User Type</label>
+                    <select name="UserType" id="UserType">
+                        <option value="Student">Student</option>
+                        <option value="Faculty/Staff">Faculty/Staff</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Email address</label>
+                    <input type="email" name="EmailAddress" class="form-control" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label >Band</label>
+                    <input type="text" name="Band" class="form-control" placeholder="Enter band">
+                </div>
+                <div class="form-group">
+                    <label >Hobby</label>
+                    <input type="text" name="Hobby" class="form-control" placeholder="Enter hobby">
+                </div>
+                <div class="form-group">
+                    <label >Course Prefix</label>
+                    <input type="text" name="CoursePrefix" class="form-control" placeholder="Enter course prefix">
+                </div>
+                <div class="form-group">
+                    <label >Course Number</label>
+                    <input type="text" name="CourseNumber" class="form-control" placeholder="Enter course number">
+                </div>
+                <div class="form-group">
+                    <label >Course Description</label>
+                    <input type="text" name="CourseDescription" class="form-control" placeholder="Enter course description">
+                </div>
+                <div class="form-group">
+                    <label >Bopgraphy</label>
+                    <textarea name="Biography" id="Bopgraphy" cols="30" rows="10" placeholder="Enter biography"></textarea>
+                </div>
+                <div class="form-group">
+                    <label >Nickname</label>
+                    <input type="text" name="Nickname" class="form-control" placeholder="Enter nickname">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </main>
+    <Footer>
+        <h2>Kevin Xu</h2>
+    </Footer>
+</body>
+
+</html>
