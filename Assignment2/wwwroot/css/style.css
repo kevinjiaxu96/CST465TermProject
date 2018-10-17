@@ -1,0 +1,125 @@
+/* 
+Palette:
+#212121
+#3ea8ff
+#7DFFD4
+*/
+
+html,
+body,
+div,
+ul,
+li,
+h1,
+h2,
+h3,
+span,
+p {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+}
+
+h1[role="name"] {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-right: 10px;
+  color: #3ea8ff;
+}
+
+.app {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.content-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-card,
+.my-info {
+  width: 100%;
+  height: 100%;
+}
+
+.info-card-container {
+  width: 800px;
+  height: 480px;
+}
+
+.nameStripe {
+  transform: rotate(-45deg);
+}
+
+.name {
+  font-size: 6rem;
+}
+.namestroke {
+  fill: none;
+  stroke-dasharray: 7% 28%;
+  stroke-width: 4px;
+  animation: strokeAnimation 3s ease-out;
+}
+.namestroke:nth-child(1) {
+  stroke: #3ea8ff;
+  stroke-dashoffset: 7%;
+}
+.namestroke:nth-child(2) {
+  stroke: #7DFFD4;
+  stroke-dashoffset: 14%;
+}
+.namestroke:nth-child(3) {
+  stroke: #ffffff;
+  stroke-dashoffset: 21%;
+}
+.namestroke:nth-child(4) {
+  stroke: #7DFFD4;
+  stroke-dashoffset: 28%;
+}
+.namestroke:nth-child(5) {
+  stroke: #3ea8ff;
+  stroke-dashoffset: 35%;
+}
+
+@keyframes strokeAnimation {
+  0% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+
+.active {
+  color: #212121 !important;
+}
+
+.about-me {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+@media (max-width: 1024px)
+{
+  .info-card-container {
+    width: 100%;
+    height: 100%;
+  }
+}

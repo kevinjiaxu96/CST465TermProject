@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section scripts
+{
+    <script type="text/javascript">
+        window.onload = function() {
+            $("#nav-home").addClass("active");
+        }
+    </script>
+}
+
+<div class="content-container">
+    <div class="info-card-container">
+        <div class="info-card">
+            <svg xmlns="http://www.w3.org/2000/svg" class="my-info">    
+                <symbol id="myName">
+                    <text text-anchor="middle"
+                        x="50%"
+                        y="40%"
+                        class="name efirstname"
+                        >
+                    KEVIN
+                    </text>
+                    <text text-anchor="middle"
+                        x="50%"
+                        y="65%"
+                        class="name lastname"
+                        >
+                    XU
+                    </text>
+                </symbol>
+                <g>
+                    <use xlink:href="#myName"
+                    class="namestroke"></use>     
+                    <use xlink:href="#myName"
+                    class="namestroke"></use>     
+                    <use xlink:href="#myName"
+                    class="namestroke"></use>     
+                    <use xlink:href="#myName"
+                    class="namestroke"></use>     
+                    <use xlink:href="#myName"
+                    class="namestroke"></use>     
+                </g>
+            </svg>
+        </div>
+    </div>
+</div>
