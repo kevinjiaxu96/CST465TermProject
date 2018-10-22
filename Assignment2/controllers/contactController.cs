@@ -14,7 +14,7 @@ namespace Assignment2.Controllers
         }
 
         [HttpPost]
-        public IActionResult SubmitForm(Person p)
+        public IActionResult SubmitForm(Comment p)
         {
             ViewBag.Name = p.Name;
             ViewBag.PhoneNumber = p.PhoneNumber;

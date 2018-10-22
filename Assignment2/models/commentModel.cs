@@ -2,7 +2,7 @@ using System;
 
 namespace Assignment2.Models
 {
-    public class Person
+    public class Comment
     {
         public string Name {get; set;}
         public string PhoneNumber {get; set;}

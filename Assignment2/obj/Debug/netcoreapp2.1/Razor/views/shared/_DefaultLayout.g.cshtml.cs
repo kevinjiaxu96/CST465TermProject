@@ -49,7 +49,7 @@ namespace AspNetCore
             WriteLiteral("\n<!DOCTYPE html>\n<html lang=\"en\">\n");
             EndContext();
             BeginContext(79, 1152, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ba63cf62a5f747e19b2ec12b414649d8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f7b4947b09334ac2ae19252ee17d090c", async() => {
                 BeginContext(85, 1044, true);
                 WriteLiteral(@"
     <meta charset=""UTF-8"">
@@ -98,7 +98,7 @@ Write(RenderSection("scripts", required: false));
             WriteLiteral("\n");
             EndContext();
             BeginContext(1232, 1287, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "82db82cc63074e11bb3b27b842a08a0d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cf7bd3d650074256a73947e2070cc0d8", async() => {
                 BeginContext(1238, 493, true);
                 WriteLiteral(@"
     <nav class=""navbar navbar-expand-lg navbar-light bg-light"">
