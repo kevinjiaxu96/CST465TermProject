@@ -1,0 +1,12 @@
+D:\ETC\Desktop\Final\Final\bin\Debug\netcoreapp2.0\Final.deps.json
+D:\ETC\Desktop\Final\Final\bin\Debug\netcoreapp2.0\Final.runtimeconfig.json
+D:\ETC\Desktop\Final\Final\bin\Debug\netcoreapp2.0\Final.runtimeconfig.dev.json
+D:\ETC\Desktop\Final\Final\bin\Debug\netcoreapp2.0\Final.dll
+D:\ETC\Desktop\Final\Final\bin\Debug\netcoreapp2.0\Final.pdb
+D:\ETC\Desktop\Final\Final\obj\Debug\netcoreapp2.0\Final.csprojAssemblyReference.cache
+D:\ETC\Desktop\Final\Final\obj\Debug\netcoreapp2.0\Final.csproj.CoreCompileInputs.cache
+D:\ETC\Desktop\Final\Final\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\ETC\Desktop\Final\Final\obj\Debug\netcoreapp2.0\Final.AssemblyInfoInputs.cache
+D:\ETC\Desktop\Final\Final\obj\Debug\netcoreapp2.0\Final.AssemblyInfo.cs
+D:\ETC\Desktop\Final\Final\obj\Debug\netcoreapp2.0\Final.dll
+D:\ETC\Desktop\Final\Final\obj\Debug\netcoreapp2.0\Final.pdb

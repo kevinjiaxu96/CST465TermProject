@@ -1,0 +1,70 @@
+﻿@model Friends
+@{
+    ViewData["Title"] = "Friends";
+}
+
+<div class="dashboard">
+    <div class="container">
+        @if (ViewBag.found == "true")
+        {
+            <form asp-controller="Profile" asp-action="AddFriend" method="POST">
+                @Html.AntiForgeryToken()
+                <div calss="form-group">
+                    <div class="card">
+                        <div class="card-body found-friend">
+                            <h5 class="card-title">@Model.Name</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">@Model.Email</h6>
+                            <input type="hidden" asp-for="Email" value="@Model.Email" />
+                            <input type="hidden" asp-for="Id" value="@Model.Id" />
+                            <input type="hidden" asp-for="Name" value="@Model.Name" />
+                            <button type="submit" class="btn btn-success">Add friend</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        }
+        else if (ViewBag.found == "false")
+        {
+            <div calss="form-group">
+                <div class="card">
+                    <div class="card-body not-found-friend">
+                        <h5 class="card-title">Not found</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">cannot find user with email: @Model.Email</h6>
+                    </div>
+                </div>
+            </div>
+        }
+        <form asp-action="Friends" asp-controller="Profile" method="POST">
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <h3>Search for friend:</h3>
+                <input class="form-control" asp-for="Email" placeholder="enter friend email..." />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+    <div class="container">
+        <hr />
+        <h3>Friends</h3>
+        @foreach (var f in Model.FriendList)
+        {
+            <form asp-controller="Profile" asp-action="RemoveFriend" method="POST">
+                @Html.AntiForgeryToken()
+                <div calss="form-group">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">@f.Name</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">@f.Email</h6>
+                            <input type="hidden" asp-for="Name" value="@f.Name" />
+                            <input type="hidden" asp-for="Email" value="@f.Email" />
+                            <input type="hidden" asp-for="Id" value="@f.Id" />
+                            <button type="submit" class="card-link btn btn-danger">Remove friend</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <hr />
+        }
+    </div>
+</div>

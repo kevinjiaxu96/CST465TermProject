@@ -1,0 +1,232 @@
+﻿
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700";
+
+html, body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    background-color: #fafafa;
+}
+
+.found-friend {
+    background-color: #007bff !important;
+    margin: 8px 0;
+    border-radius: 8px;
+}
+
+.not-found-friend {
+    background-color: #FF595E !important;
+    margin: 8px 0;
+    border-radius: 8px;
+}
+
+.found-friend *, .not-found-friend * {
+    color: white !important;
+}
+
+.post-nav li {
+    margin-bottom: 15px;
+}
+
+.post-content {
+    min-height: 72px;
+}
+
+.m-container {
+    overflow: auto !important;
+}
+
+.f-post{
+    flex-flow: column;
+    width: 100%;
+}
+
+.post-form {
+    width: 100%;
+    height: 100%;
+    margin-left: 0 !important;
+    max-width: initial;
+    margin-right: 5%;
+}
+
+.dashboard {
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;  
+}
+
+.post-card {
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.login {
+    width: 100%;
+    height: 100%;
+}
+
+.error-page {
+    height: 100%;
+    width: 100%;
+    flex-flow: column;
+}
+
+.error-page h2 {
+    font-size: 5rem;
+}
+
+.error-page h3 {
+    font-size: 3rem;
+}
+
+#app, #content {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+#github-fork {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+}
+
+.f-github {
+    padding: 0 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.git-link {
+    color: white;
+}
+
+#github-icon {
+    font-size: 2rem;
+    padding-right: 8px;
+}
+
+.footerlist, .f-github {
+    margin: 0 !important;
+    color: white;
+}
+
+.f-links {
+    color: white;
+}
+
+.f-links:hover {
+    color: white;
+}
+
+.footerlist li {
+    margin: 0 5px;
+}
+
+.head {
+    background-color: white;
+}
+
+.home-content {
+    height: 100%;
+}
+
+.first-box {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 0;
+}
+
+.nav-item {
+    font-size: 1.2rem;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 5px;
+}
+
+.second-box {
+    box-shadow: 0 0 10px 3px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08) !important;
+    position: relative;
+    z-index: 1;
+    background-color: #2A9EFF;
+    padding: 20px 25px;
+}
+
+.signup-box {
+    padding: 20px 8px;
+    color: white;
+    width: 400px;
+    background-color: #2A9EFF;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+}
+
+.signup-description {
+    padding: 15px 8px;
+}
+
+.signup-description .card-title {
+    padding: 8px 0;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.signup-description .card-text {
+    color: #949595;
+    padding: 5px 0;
+}
+
+.m-form-input {
+    border-radius: 0 !important;
+    background: none;
+    border: none;
+    border-bottom: 0.5px solid white;
+    color: white;
+}
+
+.m-form-input:focus {
+    background: none;
+    outline: none;
+}
+
+.card {
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+.home-footer {
+    position: relative;
+    height: 60px;
+    background: #2A9EFF;
+}
+
+.navbar {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 770px)
+{
+    .first-box {
+        display: none;
+    }
+
+    .f-github {
+        display: none;
+    }
+}

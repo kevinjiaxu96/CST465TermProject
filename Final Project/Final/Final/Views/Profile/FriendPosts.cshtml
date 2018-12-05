@@ -1,0 +1,35 @@
+﻿@model Posts
+
+@{
+    ViewData["Title"] = "FriendPost";
+}
+
+@section scripts {
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+}
+
+    <div class="dashboard d-flex">
+        <nav class="post-nav">
+            <ul class="list-unstyled container">
+                <li><a asp-controller="Profile" asp-action="Index">My posts</a></li>
+                <li><a asp-controller="Profile" asp-action="FriendPosts">Friend's posts</a></li>
+            </ul>
+        </nav>
+        <div class="d-flex f-post">
+            <h3>FriendPost</h3>
+            <div class="m-container">
+                @foreach (var p in Model.PostList)
+                {
+                    <div class="card post-card">
+                        <div class="card-body">
+                            <h3 class="card-title">@p.ownerName</h3>
+                            <a href="https://twitter.com/intent/tweet?button_hashtag=GoodGradeForKevin&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #GoodGradeForKevin</a>
+                            <p class="card-text"><small class="text-muted">@p.date</small></p>
+                            <p class="card-text">@p.content</p>
+                        </div>
+                    </div>
+                    <hr />
+                }
+            </div>
+        </div>
+    </div>

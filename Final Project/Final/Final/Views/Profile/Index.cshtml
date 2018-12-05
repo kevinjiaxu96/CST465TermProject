@@ -1,0 +1,51 @@
+﻿@model Posts
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section scripts {
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+}
+
+<div class="dashboard d-flex">
+    <nav class="post-nav">
+        <ul class="list-unstyled container">
+            <li><a asp-controller="Profile" asp-action="Index">My posts</a></li>
+            <li><a asp-controller="Profile" asp-action="FriendPosts">Friend's posts</a></li>
+        </ul>
+    </nav>
+    <div class="post-form container">
+        <div>
+            <form asp-action="Index" asp-controller="Profile" method="POST">
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <h3>Post something!</h3>
+                    <textarea class="form-control post-content" asp-for="Content" placeholder="say something..."></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Post</button>
+            </form>
+        </div>
+        <hr />
+        <div>
+            <h4>Previous posts</h4>
+            @for(int i = 0; i < Model.PostList.Count; ++i)
+            {
+                <div class="card post-card">
+                    <div class="card-body">
+                        <a href="https://twitter.com/intent/tweet?button_hashtag=GoodGradeForKevin&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #GoodGradeForKevin</a>
+                        <p class="card-text"><small class="text-muted">@Model.PostList[i].date</small></p>
+                        <p class="card-text">@Model.PostList[i].content</p>
+                        <form asp-controller="Profile" asp-action="RemovePost" method="POST">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" asp-for="Id" value="@Model.PostList[i].Id" />
+                            <button type="submit" class="card-link btn btn-danger">Remove</button>
+                        </form>
+                    </div>
+                </div>
+                <hr />
+            }
+        </div>
+    </div>
+</div>
+

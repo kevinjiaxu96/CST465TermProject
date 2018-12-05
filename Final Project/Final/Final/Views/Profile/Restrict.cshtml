@@ -1,0 +1,52 @@
+﻿@model RestrictUser
+@{
+    ViewData["Title"] = "Restrict";
+}
+
+<h2>Restrict</h2>
+<div class="dashboard">
+    <div class="container">
+        @if (ViewBag.restrict == "not found")
+        {
+            <div calss="form-group">
+                <div class="card">
+                    <div class="card-body not-found-friend">
+                        <h5 class="card-title">Not found</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">cannot find user with email: @Model.Email</h6>
+                    </div>
+                </div>
+            </div>
+        }
+        else if (ViewBag.restrict == "done")
+        {
+            <div calss="form-group">
+                <div class="card">
+                    <div class="card-body found-friend">
+                        <h5 class="card-title">Restricted</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">user with email: @Model.Email is hereby restricted!</h6>
+                    </div>
+                </div>
+            </div>
+        }
+        else if (ViewBag.restrict == "admin")
+        {
+            <div calss="form-group">
+                <div class="card">
+                    <div class="card-body not-found-friend">
+                        <h5 class="card-title">User is admin</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">cannot restrict an admin!</h6>
+                    </div>
+                </div>
+            </div>
+        }
+        <form asp-action="Restrict" asp-controller="Profile" method="POST">
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <h3>Restrict by Email:</h3>
+                <input class="form-control" asp-for="Email" placeholder="enter victim email..." />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Restrict</button>
+        </form>
+    </div>
+</div>
